@@ -1,0 +1,791 @@
+.container { /*Задаем фиксированные размеры контейнера для всего сайта. Выравнивание по центру с нулевыми внешними отступами по вертикали.*/
+    width: 1440px;
+    height: 6677px;
+    margin: 0 auto;
+    border: 1px solid green;
+}
+body { /*Задаем серый фон, который будет виден за границами сайта, шрифт Open Sans белого цвета жирного начертания по умолчанию.*/
+    background: #E5E5E5;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.about, .booking, .menu, .contact { /*Задаем для указанных блоков белый цвет фона.*/
+    background: #FFFFFF;
+}
+h2 { /*Задаем стиль для всех заголовков h2.*/
+    width: 100%;
+    height: 100px; /*min-height ???*/
+    border: 1px solid blue;
+    font-size: 12px;
+    line-height: 14px; /* или 117% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5em;
+    margin: 0;
+}
+h3 { /*Задаем стиль для всех заголовков h3.*/
+    width: 270px; /*auto ???*/
+    height: 56px; /*min-height ???*/
+    font-family: Banny;
+    font-size: 36px;
+    line-height: 48px; /* или 133% */
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    border: 1px solid green;
+}
+.block_text { /*Задаем стиль для блока из двух абзацев (фиксированная ширина и изменяемая высота в зав-ти от наполнения контентом).*/
+    width: 600px;
+    height: auto;
+    font-size: 18px;
+    line-height: 28px; /* или 156% */
+    color: #000000;
+    border: 1px solid crimson;
+}
+.text_2 { /*Для второго абзаца задаем размер шрифта и его толщину.*/
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px; /* или 156% */
+}
+/*******************************************************************************************************/
+
+/*RESTAURANT*/
+.restaurant { /*Для блока RESTAURANT задаем относительную ширину и фиксированную высоту(???). Задаем фон-картинку.*/
+    width: 100%;
+    height: 800px;
+    border: 1px solid red;
+    background: url("../img/JPG/restaurant_bg.jpg");
+}
+.restaurant_navigation  { /*Делаем этот элемент (меню на странице RESTAURANT) флекс-контейнером. Флекс-контейнер содержит девять элементов 
+    (navigation_home, navigation_about, navigation_team, navigation_booking, navigation_logo, navigation_menu, navigation_galerie, navigation_events, navigation_contact).
+    Задаем внешние отступы слева и справа по 80 рх.*/
+    display: flex;
+    justify-content: center;
+    margin: 0 80px 0;
+}
+.restaurant_navigation div { /*Задаем фиксированную ширину и фиксированную высоту для элементов меню (div). Делаем эти элементы флекс-контейнерами и выравниваем по вертикали (по центру) и горизонтали (по центру).
+    Все контейнеры содержат по одному элементу - ссылку-якорь на соответствующую страницу сайта, контейнер с порядковым номером 5, содержит изображение логотипа (штурвал).*/
+    width: 133px;
+    height: 100px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.restaurant_navigation div a { /*Для ссылок в меню убираем подчеркивание, задаем размер, цвет и толщину шрифта, высоту строки.*/
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 18px; /* или 150% */
+    font-weight: normal;
+    color: #FFFFFF;
+}
+.restaurant_navigation div:nth-child(5) { /*Для 5-го элемента в меню (картинка с логотипом) переопределяем ширину и высоту. Задаем внешние отступы сверху 25рх, слева и справа по 35рх.*/
+    width: 150px;
+    height: 150px;
+    border: 1px solid green;
+    margin: 25px 35px 0;
+}
+.restaurant_title { /*Делаем этот элемент флекс-контейнером и выравниваем по горизонтали (по центру).
+    Флекс-контейнер содержит три блока (restaurant_vertical_text, restaurant_title и restaurant_social_links).*/
+    display: flex;
+    justify-content: center;
+}
+.restaurant_vertical_text { /*Этот блок содержит только вертикальный текст. Задаем ему фиксированную ширину и фиксированную высоту (???).
+    Делаем этот элемент флекс-контейнером и выравниваем по вертикали (по центру) и горизонтали (по центру).
+    Флекс-контейнер содержит один элемент (абзац ???). Задаем внешние отступы сверху -76рх, слева и справа по 80рх.*/
+    width: 60px;
+    height: 699px;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -76px 80px 0;
+}
+.restaurant_vertical_text p { /*Для абзаца блока restaurant_vertical_text задаем вертикальное направление текста и поворот на 180 градусов.
+    Задаем размер шрифта, его толщину и высоту строки.*/
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px; /* или 100% */
+}
+.restaurant_center { /*Задаем блоку фиксированную ширину и фиксированную высоту (???). Делаем этот элемент вертикальным флекс-контейнером.
+    Флекс-контейнер содержит заголовки h2 и h1, маленький прямоугольник, три кнопки-ссылки (BOOK TABLE, EXPLORE и нижнюю круглую).*/
+    width: 998px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.restaurant_center h2 { /*Для заголовка h2 на странице RESTAURANT задаем относительную ширину и фиксированную высоту (???).
+    Задаем внешний отступ сверху 151рх и автоматическое выравнивание по ширине. Задаем нормальную толщину шрифта.*/
+    width: 100%;
+    height: 18px;
+    border: 1px solid red;
+    margin: 151px auto 0;
+    font-weight: normal;
+}
+h1 { /*Для заголовка h1 на странице RESTAURANT задаем относительную ширину и фиксированную высоту (???).
+    Задаем шрифт, его размер, толщину и высоту строки. Делаем этот элемент флекс-контейнером и выравниваем по вертикали (по центру) 
+    и горизонтали (по центру). Задаем внешний отступ сверху -1рх.*/
+    width: 100%;
+    height: 139px;
+    border: 1px solid orangered;
+    font-family: Banny;
+    font-size: 96px;
+    line-height: 0px; /* или 0% */
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -1px 0 0 0;
+}
+.buttons { /*Задаем блоку относительную ширину (???). Делаем этот элемент флекс-контейнером и выравниваем по горизонтали (по центру). 
+    Флекс-контейнер содержит два элемента (кнопки BOOK TABLE и EXPLORE).*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button { /*Для кнопок с классом button задаем фиксированную ширину и фиксированную высоту (???). Задаем заливку цветом, радиус скругления и 
+    внешие отступы сверху 31рх, слева и справа по 20рх. Задаем цвет текста и убираем подчеркивание.*/
+    width: 200px;
+    height: 60px;
+    background: #E8C300;
+    border: 1px solid #E8C300;
+    border-radius: 5px;
+    margin: 31px 20px 0;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.explore { /*Для кнопки EXPLORE задаем прозрачную заливку и цвет рамки.*/
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.down_button { /*Для нижней круглой кнопки задаем внешний отступ сверху 82рх и автоматическое выравнивание по ширине.
+    Делаем этот элемент флекс-контейнером и выравниваем горизонтально (по центру). Флекс-контейнер содержит ссылку, внутри которой находится картинка.*/
+    margin: 82px auto;
+    display: flex;
+    justify-content: center;
+}
+.down_button:hover { /*При наведении курсора на нижнюю круглую кнопку-ссылку происходит увеличение значка.*/
+    transform: scale(1.2);
+}
+.button:hover { /*При наведении курсора на кнопки c классом button (BOOK TABLE и EXPLORE) меняется вид курсора и уменьшается размер кнопок.*/
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.restaurant_social_links { /*Задаем блоку фиксированную ширину и фиксированную высоту (???). Делаем этот элемент вертикальным флекс-контейнером и выравниваем вертикально (по центру) и горизонтально (по центру). 
+    Флекс-контейнер содержит три ссылки на социальные сети (facebook, twitter и instagram). Задаем внешние оступы сверху -76рх, слева и справа по 80рх.*/
+    width: 60px;
+    height: 699px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -76px 80px 0;
+}
+.twitter { /*Для ссылки на twitter (находится по середине) задаем внешние отступы сверху и снизу по 13рх. Это делается для того, чтобы между ссылками стало больше расстояние.*/
+    margin: 13px 0;
+}
+.facebook:hover { /*При наведении курсора на ссылку facebook происходит увеличение значка.*/
+    transform: scale(1.2);
+}
+.twitter:hover { /*При наведении курсора на ссылку twitter происходит увеличение значка.*/
+    transform: scale(1.2);
+}
+.instagram:hover { /*При наведении курсора на ссылку instagram происходит увеличение значка.*/
+    transform: scale(1.2);
+}
+/*******************************************************************************************************/
+
+/*ABOUT*/
+.about { /*Для блока ABOUT задаем относительную ширину и фиксированную высоту(???). 
+        Делаем этот элемент флекс-контейнером и выравниваем по вертикали (по центру) и горизонтали (прижимаем к краям контейнера).
+        Флекс-контейнер содержит два блока (about_text и about_image).*/
+    width: 100%;
+    height: 675px;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+.about_text { /*Задаем блоку фиксированную ширину (???) и изменяемую высоту в зав-ти от наполнения контентом.
+            Делаем этот элемент вертикальным флекс-контейнером и выравниваем по вертикали (по центру) и горизонтали (по центру).
+            Задаем внешний отступ слева 80px.*/
+    width: 600px;
+    height: auto;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 0 80px;
+}
+.about_image { /*Задаем блоку фиксированную ширину (???) и фиксированную высоту (???).
+    Делаем этот элемент флекс-контейнером и выравниваем по вертикали (по центру).
+    Задаем внешний отступ справа 80px.*/
+    width: 600px;
+    height: 475px;
+    border: 1px solid crimson;
+    display: flex;
+    align-items: center;
+    margin: 0 80px 0 0;
+}
+.about_image img { /*Для картинки задаем внешний отступ слева -50px.*/
+    margin: 0 0 0 -50px;
+}
+/*******************************************************************************************************/
+
+/*TEAM*/
+.team, .specialties { /*Для блоков TEAM и SPECIALTIES задаем относительную ширину и фиксированную высоту(???).*/
+    width: 100%;
+    height: 675px;
+    border: 1px solid orangered
+}
+.team { /*Для блока TEAM задаем фон-картинку.*/
+    background: url("../img/JPG/team_bg.jpg");
+}
+.team_container, .specialties_container { /*Для блоков team_container и specialties_container задаем относительную ширину и фиксированную высоту(???). 
+    Делаем эти элементы флекс-контейнерами и выравниваем по вертикали (по центру) и горизонтали (прижимаем к краям контейнеров).
+    Флекс-контейнеры содержит два блока (team_image и team_text / specialties_image и specialties_text соответственно).*/
+    width: 100%;
+    height: 575px;
+    border: 1px solid aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.team_image, .specialties_image { /*Задаем блокам team_image и specialties_image фиксированную высоту (???).
+    Делаем эти элементы флекс-контейнерами и выравниваем их по вертикали (по центру).
+    Задаем внешние отступы справа 80px и снизу 100px.*/
+    height: 475px;
+    border: 1px solid crimson;
+    display: flex;
+    align-items: center;
+    margin: 0 80px 100px 0;
+}
+.team_image { /*Задаем блоку team_image фиксированную ширину (???).*/
+    width: 668px;
+}
+.team_image img, .specialties_image img { /*Для картинок в блоках  team_image и specialties_image задаем нулевые внешние отступы.*/
+    margin: 0;
+}
+.team_h3, .specialties_h3 { /*Для заголовков h3 в блоках team_еуче и specialties_еуче задаем белый цвет и нормальную толщину шрифта.*/
+    color: #FFFFFF;
+    font-weight: normal;
+}
+.team_text, .specialties_text { /*Задаем блокам team_text и specialties_text, состоящих из заголовка, маленького прямоугольника и двух абзацев изменяемую высоту в зав-ти от наполнения контентом.
+    Делаем эти элементы вертикальными флекс-контейнерами и выравниваем их по вертикали (по центру) и горизонтали (по центру).*/
+    width: 599px;
+    height: auto;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 101px 100px 0;
+}
+.team_text { /*Задаем блоку team_text, состоящему из заголовка, маленького прямоугольника и двух абзацев фиксированную ширину (???) и 
+    внешние отступы справа 101px и снизу 100px.*/
+    width: 599px;
+    margin: 0 101px 100px 0;
+}
+.team_block_text, .specialties_block_text { /*Для блоков team_block_text и specialties_block_text, состоящих из двух абзацев задаем белый цвет шрифта.*/
+    color: #FFFFFF;
+}
+/*******************************************************************************************************/
+
+/*BOOKING*/
+.booking { /*Для блока BOOKING задаем относительную ширину и фиксированную высоту(???).*/
+    width: 100%;
+    height: 675px;
+    border: 1px solid blue;
+}
+.booking_container { /*Делаем этот элемент флекс-контейнером и выравниваем по вертикали (по центру) и горизонтали (прижимаем к краям контейнера).
+    Флекс-контейнер содержит два блока (booking_form и booking_image). Задаем внешний отступ сверху 100рx.*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 0 0 0;
+}
+.booking_form { /* Для блока booking_form задаем фиксированную ширину и фиксированную высоту(???).
+    Делаем этот элемент вертикальным флекс-контейнером и выравниваем по вертикали (по центру) и горизонтали (прижимаем к началу контейнера).
+    Флекс-контейнер содержит три элемента (заголовок h3, маленький прямоугольник и блок booking_block_form). Задаем внешний отступ слева 135рx.*/
+    width: 564px;
+    height: 351px;
+    border: 1px solid orangered;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 0 135px;
+}
+.booking_h3 { /*Для заголовка h3 задаем относительную ширину и фиксированную высоту(???), выравнивание текста по центру.*/
+    width: 100%;
+    height: 56px;
+    text-align: center;
+}
+.booking_block_form { /*Для блока booking_block_form (состоящего из 6 полей форм и кнопки) задаем фиксированную ширину и фиксированную высоту(???), внешний отступ сверху 20 рх.*/
+    width: 565px;
+    height: 270px;
+    border: 1px solid cornflowerblue;
+    margin: 20px 0 0 0;
+}
+.booking_image { /*Для блока booking_image задаем фиксированную ширину и фиксированную высоту(???).
+    Делаем этот элемент флекс-контейнером (???) и выравниваем по вертикали (по центру) и горизонтали (прижимаем к концу контейнера).
+    Флекс-контейнер содержит только картинку. Задаем нулевые внешние отступы.*/
+    width: 588px;
+    height: 475px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+}
+.form { /*Задаем общие свойства для всех полей формы (input): 
+    фиксированную ширину и фиксированную высоту (???), цвет фона, радиус скругленияи и рамку.*/
+    width: 267.5px;
+    height: 60px;
+    background: #E5E5E5;
+    border-radius: 5px;
+    border: 1px solid #E5E5E5;
+}
+input, textarea { /*Для всех полей формы (input и textarea) задаем внутрениий отступ 10рх для того, чтобы курсор не прилипал к началу формы.*/
+    padding-left: 10px;
+}
+input, select, textarea, button:focus /*Убрать select!!!???*/
+{ /*Убираем выделение рамкой при постановке фокуса на поле формы для всех input, select, textarea и button*/
+    outline: 0;
+    outline-offset: 0;
+}
+.name_email, .phone_people, .date_time { /*Делаем выбранные элементы флекс-контейнерами и выравниваем по горизонтали (прижимаем к краям контейнеров).
+    Флекс-контейнеры содержат по два элемента (см. название контейнера). Задаем внешний отступ сверху 10рх.*/
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+}
+.name_email { /*Задаем нулевые внешние отступы для вехнего флекс-контейнера name_email, чтобы он прилипал к верхней границе контейнера booking_block_form.
+    Таким образомЯ, исключаем ранее заданный внешний отступ сверху 10рх.*/
+    margin: 0;
+}
+.form_submit { /*Задаем фиксированную ширину и фиксированную высоту (???) для кнопки в блоке форм.
+    Задаем кнопке фон, радиус скругления, рамку, цвет текста и толщину шрифта. Задаем внешний отступ сверху 10рх.*/
+    width: 565px;
+    height: 60px;
+    background: #E8C300;
+    border-radius: 5px;
+    border: 1px solid #E8C300;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+.form_submit:hover { /*Для кнопки отправки формы на странице BOOKING (form_submit) задаем изменение вида курсора и добавление тени при наведении мыши.*/
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 2px #000000) drop-shadow(-2px -2px 2px #000000);
+}
+.booking_footer { /*Задаем параметры мелкого текста в подвале блока BOOKING. Задаем относительную ширину и фиксированную высоту (???). 
+    Делаем этот элемент флекс-контейнером и выравниваем по вертикали (по центру) и горизонтали (по центру).
+    Флекс-контейнер содержит только один элемент - абзац. Задаем размер, цвет и прозрачность шрифта, высоту его строки.*/
+    width: 100%;
+    height: 98px;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 12px; /* или 100% */
+    color: rgba(51, 51, 51, 0.5);
+}
+/*******************************************************************************************************/
+/* 
+НУЖНО ДОРАБОТАТЬ:
+1. Сделать выпадающие списки (select) для полей People и Time. Ширина и высота полей меньше. чем у полей input!!!
+2. При задании полю Email типа email не пропадает текст при постановке фокуса, поэтому тип поля изменен на text!!!
+3. Нужно убрать текст-подсказу на русском языке и переделать ее в формате представленном в макете!!!
+*/ 
+
+/*SPECIALTIES*/
+.specialties { /*Для блока SPECIALTIES задаем фон-картинку.*/
+    background: url("../img/JPG/specialties_bg.jpg");
+}
+.specialties_image { /*Задаем блоку specialties_image фиксированную ширину (???)*/
+    width: 680px;
+}
+.specialties_text { /*Задаем блоку specialties_text, состоящему из заголовка, маленького прямоугольника и двух абзацев фиксированную ширину (???) и 
+    внешние отступы справа 80рх и снизу 100рх.*/
+    width: 600px;
+    margin: 0 80px 100px 0;
+}
+/*******************************************************************************************************/
+/*
+НУЖНО ДОРАБОТАТЬ:
+Реализовать слайдер/карусель для смены картинок с тремя кружочками внизу страницы!!!
+*/
+
+/*MENU*/
+.menu { /*Для блока MENU задаем относительную ширину и фиксированную высоту(???).*/
+    width: 100%;
+    height: 920px;
+    border: 1px solid crimson;
+}
+.menu_text { /*Делаем этот элемент вертикальным флекс-контейнером и выравниваем по вертикали (по центру) и горизонтали (по центру).
+    Флекс-контейнер содержит три элемента (заголовок h3, маленький прямоугольник и menu_block_text с одним абзацем внутри). 
+    Задаем внешний отступ сверху 100рx.*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0 0 0;
+}
+.menu_h3 { /*Задаем фиксированную ширину (???) для заголовка h3*/
+    width: 1280px;
+}
+.menu_navigation { /*Делаем этот элемент (меню на странице MENU) флекс-контейнером и выравниваем его по горизонтали (по центру).
+    Флекс-контейнер содержит 13 элементов (7 ссылок, обернутых в div и 6 элементов hr, обернутых в div). 
+    Задаем внешний отступ сверху 55рx и автоматическое горизонтальное выравнивание.*/
+    display: flex;
+    justify-content: center;
+    margin: 55px auto 0;
+}
+.menu_navigation div:nth-child(2n+1) { /*Для нечетных элементов меню (ссылки, обернутые в div) задаем фиксированную ширину и фиксированную высоту (???).
+    Делаем эти элементы флекс-контейнерами и выравниваем их по вертикали (по центру) и по горизонтали (по центру).*/
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu_navigation div:nth-child(2n) { /*Четные элементы меню (элементы hr, обернутые в div) делаем флекс-контейнерами и выравниваем их по вертикали (по центру) и по горизонтали (по центру).
+    Задаем им фиксированную ширину 1рх (???) и фиксированную высоту 50рх (???). Эти элементы являются вертикальными линиями-разделителями элементов меню.*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1px; /*???*/
+    height: 50px; /*???*/
+}
+.menu_navigation div a { /*Для текста ссылок меню убираем подчеркивание и задаем черный цвет шрифта.*/
+    text-decoration: none;
+    color: #000000;
+}
+.menu_navigation div:hover { /*Задаем изменение фона блока со ссылкой и изменение вида курсора при наведении на блок div*/
+    background-color: #E8C300;
+    cursor: pointer;
+}
+hr { /*Задаем им фиксированную ширину 1рх (???) и фиксированную высоту 50рх (???).*/
+    width: 1px; /*???*/
+    height: 50px; /*???*/
+}
+.menu_pizza_price { /*Задаем фиксированную максимальную ширину и изменяемую высоту (в зависимости от контента) блока, содержащего три столбца с ценами на пиццу (???).
+    Делаем этот элемент флекс-контейнером и выравниваем его по горизонтали (по краям контейнера).
+    Флекс-контейнер содержит 3 элемента (pizza_col_1, pizza_col_2 и pizza_col_3). Задаем шрифт, цвет шрифта, его размер и высоту строки.
+    Задаем внешний отступ сверху 55рx и автоматическое горизонтальное выравнивание.*/
+    max-width: 1280px;
+    height: auto;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    margin: 55px auto;
+    font-family: Banny;
+    font-size: 18px;
+    line-height: 18px; /* или 100% */
+    color: #333333;
+}
+.bludo_block { /*Задаем фиксированную ширину и изменяемую высоту (???) в зависимости от контента для каждого столбца внутри блока menu_pizza_price.*/
+    width: 363px;
+    height: auto;
+    border: 1px solid red;
+}
+/*******************************************************************************************************/
+/*
+НУЖНО ДОРАБОТАТЬ:
+1. Реализовать механизм перехода по ссылкам меню, чтобы при выборе блюла изменялся прайс, а верхняя часть (текстовый блок и само меню) оставалась на странице MENU неизменной!!!
+2. Предусмотреть выравнивание одного, двух и четырех столбцов внутри блоков, аналогичных блоку menu_pizza_price (в том случае, если количество блюд в этих блоках будет значительно отличаться от количества блюд в блоке menu_pizza_price)!!!
+*/
+
+/*EVENTS*/
+.events { /*Задаем относительную ширину и фиксированную высоту (???) для блока EVENTS. Задаем фон-картинку.*/
+    width: 100%;
+    height: 675px;
+    border: 1px solid cornflowerblue;
+    background: url("../img/JPG/specialties_bg.jpg");
+}
+.events_container { /*Делаем этот элемент флекс-контейнером и выравниваем его по горизонтали (по краям контейнера).
+    Флекс-контейнер содержит 2 элемента (events_image_left и events_image_right).*/
+    display: flex;
+    justify-content: space-between;
+}
+.events_image_left { /*Задаем блоку фиксированнуую ширину и фиксированную высоту (???). Задаем внешний отступ слева 80рх.
+    Делаем этот элемент флекс-контейнером. Флекс-контейнер содержит 2 элемента (картинку events_image_1_min и блок events_text_left).*/
+    width: 600px;
+    height: 475px;
+    margin: 0 0 0 80px;
+    display: flex;
+}
+.events_image_right { /*Задаем блоку фиксированнуую ширину и фиксированную высоту (???). Задаем внешний отступ справа 80рх.
+    Делаем этот элемент флекс-контейнером. Флекс-контейнер содержит 2 элемента (блок events_text_right и картинку events_image_2_min).*/
+    width: 600px;
+    height: 475px;
+    margin: 0 80px 0 0;
+    display: flex;
+}
+.events_text_left, .events_text_right { /*Задаем блокам фиксированную ширину и фиксированную высоту (???). 
+    Задаем черный фон, шрифт, его цвет, размер, толщину, высоту строки и величину отступа первой строки.
+    Делаем эти элементы флекс-контейнерами и выравниваем по вертикали (по центру). Флекс-контейнеры содержат по одному элементу - абзацу.*/
+    width: 80px;
+    height: 475px;
+    background: #000000;
+    font-family: Banny;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 12px; /* или 50% */
+    text-indent: 20px;
+    display: flex;
+    align-items: center;
+}
+.events_text_left p { /*Для абзаца левого блока (WEDDINGS) задаем вертикальное направление текста и внутренние отступы снизу 345рх и слева 10рх.*/
+    writing-mode: tb-rl;
+    padding: 0px 0px 345px 10px;
+}
+.events_text_right p { /*Для абзаца правого блока (CORPORATE PZRTIES) задаем вертикальное направление текста, поворот на 180 градусов и внутренние отступы справа 10рх и снизу 211рх.*/
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    padding: 0px 10px 211px 0;
+}
+.events_footer { /*Для блока footer на странице EVENTS задаем относительную ширину и фиксированную высоту (???).
+    Задаем размер и толщину шрифта, высоту строки. Делаем этот элемент флекс-контейнером и выравниваем вертикально (по центру) и горизонтально (по центру). 
+    Флекс-контейнер содержит один элемент - абзац.*/
+    width: 100%;
+    height: 98px;
+    border: 1px solid yellow;
+    font-size: 12px;
+    line-height: 12px; /* или 100% */
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*******************************************************************************************************/
+
+/*GALERIE*/
+.galerie { /*Задаем относительную ширину и фиксированную высоту (???) блоку GALERIE.
+    Делаем этот элемент флекс-контейнером. Флекс-контейнер содержит 4 элемента (image_1, image_2, image_3  и image_4).*/
+    width: 100%;
+    height: 360px;
+    border: 1px solid orangered;
+    display: flex;
+}
+/*******************************************************************************************************/
+
+/*CONTACT*/
+.contact { /*Задаем относительную ширину и фиксированную высоту (???) блоку CONTACT.*/
+    width: 100%;
+    height: 647px;
+    border: 1px solid darkmagenta;
+}
+.contact_container { /*Делаем этот элемент вертикальным флекс-контейнером. Флекс-контейнер содержит 2 элемента (contact_text и contact_form).*/
+    display: flex;
+    flex-direction: column;
+}
+.contact_text { /*Делаем этот элемент вертикальным флекс-контейнером. Флекс-контейнер содержит 3 элемента 
+    (заголовок h3, маленький прямоугольник и блок contact_block_text, содержащий один абзац). Задаем вертикальный отступ сверху 100рх.*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0 0 0;
+}
+.contact_block_text { /*Задаем блоку contact_block_text фиксированную ширину и изменяемую высоту в зависимости от контента (???)*/
+    width: 565px;
+    height: auto;
+    border: 1px solid blue;
+}
+.contact_form { /*Задаем блоку contact_form вертикальный отступ сверху 50рх и выравнивание по ширине. 
+    Задаем фиксированную ширину и фиксированную высоту (???).*/
+    margin: 50px auto 0;
+    width: 1280px;
+    height: 200px;
+    border: 1px solid green;
+}
+.name_email_phone { /*Делаем этот элемент флекс-контейнером. Флекс-контейнер содержит 3 элемента input
+    (contact_form_name, contact_form_phone, contact_form_email). Это сделано, для выравнивания трех полей input в одну строку.*/
+    display: flex;
+}
+.name_email_phone input { /*Для всех input, находящихся внутри блока name_email_phone задаем фиксированную ширину и фиксированную высоту (???).
+    Задаем цвет фону полей и радиус скругления.*/
+    width: 420px;
+    height: 60px;
+    background: #E5E5E5;
+    border-radius: 5px;
+}
+.name_email_phone input:nth-child(2) { /*Для 2-го (среднего) элемента input - contact_form_phone, находящегося внутри блока name_email_phone 
+    задаем внешние отступы справа и слева по 10рх. Это нужно для того, чтобы элементы не прилипали друг к другу.*/
+    margin: 0 10px 0;
+}
+.contact_message { /*Для поля ввода сообщений задаем фиксированную ширину и фиксированную высоту (???). 
+    Задаем полю цвет фона и радиус скругления. Задаем внешний отступ сверху 10рх.*/
+    width: 1278px;
+    height: 120px;
+    background: #E5E5E5;
+    border-radius: 5px;
+    margin: 10px 0 0;
+}
+.contacts_button { /*Для блока contacts_button задаем фиксированную ширину и фиксированную высоту (???). 
+    Делаем этот элемент флекс-контейнером. Флекс контейнер содержит 2 элемента (contacts и contact_button). 
+    Этот блок объединяет блок с контактами и кнопку отправки формы со страницы CONTACT. Задаем внешний отступ сверху 6рх.*/
+    width: 1280px;
+    height: 60px;
+    border: 1px solid red;
+    display: flex;
+    margin: 6px 0 0;
+}
+.contacts { /*Задаем блоку contacts фиксированную ширину и фиксированную высоту (???). Задаем цвет, прозрачность, размер и толщину шрифта. 
+    Делаем этот элемент флекс-контейнером и выравниваем по вертикали (по центру) и горизонтали (от начала контейнера). 
+    Флекс контейнер содержит 3 элемента (contacts_adress, contacts_phone и contacts_email).*/
+    width: 640px;
+    height: 60px;
+    border: 1px solid yellow;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contacts_phone { /*Для 2-го (среднего) элемента - contacts_phone, находящегося внутри блока contacs 
+    задаем внешние отступы справа и слева по 15рх. Это нужно для того, чтобы элементы не прилипали друг к другу.*/
+    margin: 0 15px 0 15px;
+}
+.contacts div span:nth-child(2n+1) { /*Для всех нечетных элементов span, находящихся внутри контейнеров div, которые в свою очередь находятся в
+    блоке contacts задаем размер шрифта и цвет. Так как элементов span внутри div только два, то стиль применится только к первому элементу span.
+    Этим стилем мы увеличиваем и окрашиваем иконки на странице CONTACT.*/
+    font-size: 16px;
+    color: #E8C300;
+}
+.contact_button { /*Для контейнера div c кнопкой отправки формы на странице CONTACT задаем фиксированную ширину.*/
+    width: 640px;
+    border: 1px solid blue;
+}
+.contact_form_submit { /*Для кнопки отправки формы на странице CONTACT задаем фиксированную ширину и фиксированную высоту (???).
+    Задаем фон, радиус скругления, цвет рамки, цвет и толщину шрифта. Задаем внешний отступ сверху -2рх.*/
+    width: 640px;
+    height: 60px;
+    background: #E8C300;
+    border-radius: 5px;
+    border: 1px solid #E8C300;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: -2px 0 0 0;
+}
+.contact_form_submit:hover { /*Для кнопки отправки формы на странице CONTACT (contact_form_submit) задаем изменение вида курсора и добавление тени при наведении мыши.*/
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 2px #000000) drop-shadow(-2px -2px 2px #000000);
+}
+/*******************************************************************************************************/
+
+/*MAPS*/
+.maps { /*Задаем относительную ширину и фиксированную высоту (???) для блока MAPS.
+    Делаем этот элемент вертикальным флекс-контейнером. Флекс-контейнер содержит 2 элемента (maps_image и maps_footer).*/
+    width: 100%;
+    height: 556px;
+    border: 1px solid darkolivegreen;
+    display: flex;
+    flex-direction: column;
+}
+.maps_image {
+    /*ПОЧЕМУ-ТО НЕКОРРЕКТНО РАБОТАЕТ ЗАДАНИЕ ШИРИНЫ И ВЫСОТЫ ДЛЯ КАРТЫ!!! НЕ ПОЙМУ: В ЧЕМ ПРИЧИНА???
+    В html-коде задаем для карты относительную ширину и фиксированную высоту (???)*/
+}
+.maps_footer { /*Задаем относительную ширину и фиксированную высоту (???) для блока maps_footer. 
+    Задаем фон подвала, размер текста, его цвет и высоту строки. Делаем этот элемент флекс-контейнером. Флекс-контейнер содержит только один элемент - абзац.
+    Выравниваем флекс-элемент по вертикали (по центру) и горизонтали (по центру).*/
+    width: 100%;
+    height: 100px;
+    border: 1px solid chartreuse;
+    background: rgba(0, 0, 0, 0.9);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px; /* или 100% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+/*******************************************************************************************************/
+/*
+НУЖНО ДОРАБОТАТЬ:
+1. Сделать карту интерактивной, чтобы ее можно было двигать!!!
+*/
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+
+/*ANIMATION*/
+/*СОЗДАНИЕ ЭФФЕКТА ИЗМЕНЕНИЯ ЦВЕТА ССЫЛОК И ПОДЧЕРКИВАНИЯ ИХ ИЗ ЦЕНТРА*/
+.restaurant_navigation div a {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+.restaurant_navigation div a:after {
+    display: block;
+    content: "";
+    background-color: #E8C300;
+    height: 3px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.restaurant_navigation div a:hover:after,
+.restaurant_navigation div a:focus:after {
+    width: 100%;
+}
+.restaurant_navigation div a:hover {
+    color: red;
+} 
+/*ОКОНЧАНИЕ ЭФФЕКТА ИЗМЕНЕНИЯ ЦВЕТА ССЫЛОК И ПОДЧЕРКИВАНИЯ ИХ ИЗ ЦЕНТРА*/
+
+
+/*ЭФФЕКТ КАЧАНИЯ ШТУРВАЛА*/
+* {
+    box-sizing: border-box;
+  }
+  @keyframes rotate-animation {
+    from {
+      transform: rotate(-30deg);
+    }
+    to {
+      transform: rotate(30deg);
+    }
+  }
+  .navigation_logo {
+    margin: 0 auto;
+    position: relative;
+    animation: rotate-animation linear 1s infinite alternate;
+    animation-duration: 4s;
+  }
+  /*ОКОНЧАНИЕ ЭФФЕКТА КАЧАНИЯ ШТУРВАЛА*/
+
+/*НЕОБХОДИМО ДОРАБОТАТЬ:
+1. Вертикальный текст на странице RESTAURANT; - СДЕЛАНО - ОШИБКА!!!
+2. Вертикальный текст на странице EVENTS; - СДЕЛАНО - ОШИБКА!!!
+3. Убрать все обводки блоков;
+4. Поставить направляющие линии вертикальные и горизонтальные; !!!
+5. Попробовать другой эффект анимации (качение влево-вправо); - СДЕЛАНО
+6. Подумать над дополнительными анимационными эффектами; - СДЕЛАНО
+7. Вычитать код!!! - СДЕЛАНО
+*/
+
+/*ADAPTIV*/
